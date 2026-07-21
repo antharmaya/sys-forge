@@ -1,0 +1,39 @@
+[project]
+name = "systems-forge"
+version = "0.2.1"
+description = "Tested resilience, concurrency, DSA, and agentic-AI primitives (circuit breakers, retry with jitter, MCP server, supervisor/worker orchestrator) for building systems that survive contact with production."
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "varbees", email = "harshavar968@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.28.1",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.6,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.mypy]
+strict = true
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.0",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "ruff>=0.15.22",
+]
