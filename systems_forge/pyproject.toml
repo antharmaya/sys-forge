@@ -1,6 +1,6 @@
 [project]
 name = "systems-forge"
-version = "0.2.1"
+version = "0.2.2"
 description = "Tested resilience, concurrency, DSA, and agentic-AI primitives (circuit breakers, retry with jitter, MCP server, supervisor/worker orchestrator) for building systems that survive contact with production."
 readme = "README.md"
 license = "MIT"

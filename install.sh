@@ -4,7 +4,7 @@
 #    or: SYSTEMS_FORGE_HOME=/custom/path bash install.sh
 set -euo pipefail
 
-SF_VERSION="0.2.1"
+SF_VERSION="0.2.2"
 SF_BASE_URL="${SYSTEMS_FORGE_BASE_URL:-https://antharmaya.com/systems-forge}"
 SF_URL="${SF_BASE_URL}/systems-forge-${SF_VERSION}.tar.gz"
 SF_DEST="${SYSTEMS_FORGE_HOME:-$HOME/.claude/skills/systems-forge}"
@@ -58,5 +58,7 @@ Done. systems-forge v${SF_VERSION} is installed at: ${SF_DEST}
                           into your project root as AGENTS.md.
   Standalone Python use:  import systems_forge.resilience / .concurrency / .dsa / .tooling
   Standalone bash use:    source ${SF_DEST}/lib/core.sh
+
+  Source: https://github.com/antharmaya/sys-forge
 
 EOF
