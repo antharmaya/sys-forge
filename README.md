@@ -11,11 +11,11 @@ Claude Code, Codex, Cursor, Cline, Aider, and Windsurf alike. Not prose to paste
 every time. Import it.
 
 ```bash
-curl -fsSL https://antharmaya.com/systems-forge/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/antharmaya/sys-forge/v0.2.2/install.sh | bash
 ```
 
 Installs the skill to `~/.claude/skills/systems-forge`, self-tests the bash library on your machine, and
-installs the Python package if `uv` or `pip` is present. Full detail: [antharmaya.com/labs/systems-forge](https://antharmaya.com/labs/systems-forge).
+installs the Python package if `uv` or `pip` is present. Set `SYSTEMS_FORGE_HOME` to install elsewhere.
 
 ## What's inside
 
@@ -32,9 +32,12 @@ installs the Python package if `uv` or `pip` is present. Full detail: [antharmay
 
 ```bash
 # One command — installs the Claude Code skill + Python package
-curl -fsSL https://antharmaya.com/systems-forge/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/antharmaya/sys-forge/v0.2.2/install.sh | bash
 
-# Python library only
+# From a clone of the tagged source
+git clone --branch v0.2.2 https://github.com/antharmaya/sys-forge.git ~/.claude/skills/systems-forge
+
+# Python library only (from a clone)
 uv pip install ./systems_forge
 
 # Bash library only

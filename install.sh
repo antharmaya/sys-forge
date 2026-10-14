@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # systems-forge installer — one command, any Unix-like system (macOS, Linux; Windows via WSL/Git-Bash).
-# Usage: curl -fsSL https://antharmaya.com/systems-forge/install.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/antharmaya/sys-forge/v0.2.2/install.sh | bash
 #    or: SYSTEMS_FORGE_HOME=/custom/path bash install.sh
 set -euo pipefail
 
 SF_VERSION="0.2.2"
-SF_BASE_URL="${SYSTEMS_FORGE_BASE_URL:-https://antharmaya.com/systems-forge}"
-SF_URL="${SF_BASE_URL}/systems-forge-${SF_VERSION}.tar.gz"
+# Release archive of the tagged source on GitHub (contains no .git directory).
+SF_URL="${SYSTEMS_FORGE_URL:-https://github.com/antharmaya/sys-forge/archive/refs/tags/v${SF_VERSION}.tar.gz}"
 SF_DEST="${SYSTEMS_FORGE_HOME:-$HOME/.claude/skills/systems-forge}"
 
 log() { echo "[systems-forge] $*"; }
