@@ -19,7 +19,7 @@ jobs:
       - uses: astral-sh/setup-uv@v10.3.0
         with:
           python-version: "3.12"
-      - run: uv run pytest -q
+      - run: uv run --locked pytest -q
       - run: uv run ruff check src tests
       - run: uv run mypy --strict src
 

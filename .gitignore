@@ -3,6 +3,5 @@ __pycache__/
 .pytest_cache/
 *.egg-info/
 systems_forge/.venv/
-systems_forge/uv.lock
 .mypy_cache/
 .ruff_cache/
